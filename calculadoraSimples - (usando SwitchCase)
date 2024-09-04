@@ -1,0 +1,27 @@
+primeiro_num = int (input ("Informe o 1º numero: "))
+
+segundo_num = int (input ("Informe o 2º numero: "))
+
+#"strip().lower()" usado para garantir que a operação seja comparada de forma case-insensitive e sem espaços extras.
+operacao = input ("Informe a operação desejada: ").strip().lower()
+
+
+def verificar_operacao (operacao, primeiro_num, segundo_num):
+    match operacao:
+        case "soma":
+            print ("A soma é: ", primeiro_num + segundo_num)
+        case "substracao":
+            print ("A subtração é: ", primeiro_num - segundo_num)
+        case "multiplicacao":
+            print ("A multiplicação é: ", primeiro_num * segundo_num)
+        case "divisao":
+            if segundo_num == 0:
+                print ("Erro: Divisão por 0")
+            else: 
+                print ("A divisao é:", primeiro_num / segundo_num)
+        case _:
+            print ("Operação não reconhecida.")
+
+
+# "verificar_operacao" esta sendo usado para apresentar os resutlados            
+verificar_operacao(operacao, primeiro_num, segundo_num)
